@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2c2c2c;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background: linear-gradient(to right, #ff66b2, #8000ff);
+    padding: 50px;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.widget {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.widget:hover {
+    transform: scale(1.1);
+}
+
+.widget img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #111;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes cherry-blossom {
+    0% { top: -50px; opacity: 1; }
+    100% { top: 100vh; opacity: 0; }
+}
+
+.cherry-blossom {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: pink;
+    border-radius: 50%;
+    animation: cherry-blossom 5s infinite ease-in-out;
+}
+
+.cherry-blossom:nth-child(odd) {
+    animation-duration: 4s;
+}
+
+.cherry-blossom:nth-child(even) {
+    animation-duration: 6s;
+}
