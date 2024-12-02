@@ -4,4 +4,4 @@
 
 #### it is a test.
 
-main
+this is my-page
