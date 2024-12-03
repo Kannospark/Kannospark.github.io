@@ -4,14 +4,23 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     background-color: #2c2c2c;
     color: white;
     font-family: Arial, sans-serif;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* 使内容垂直排列 */
+    justify-content: flex-start; /* 保证内容区域占据顶部 */
+    min-height: 100vh; /* 确保页面至少占满屏幕高度 */
 }
 
 .container {
+    flex-grow: 1;  /* 使内容区域占据剩余空间 */
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -59,12 +68,16 @@ p {
 }
 
 footer {
-    background-color: #111;
+    background-color: #111111cd;
     padding: 20px;
-    color: white;
-    position: fixed;
-    bottom: 0;
+    color: rgb(200, 200, 200);
+    text-align: center;
     width: 100%;
+}
+
+/* 空白区域，确保页面内容较少时footer不遮挡 */
+.spacer {
+    height: 200px;  /* 增加一个空白区域 */
 }
 
 @keyframes cherry-blossom {
@@ -102,14 +115,6 @@ footer {
     z-index: 1000;
 }
 
-body {
-    background-color: #2c2c2c;
-    color: white;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-    position: relative; /* 允许绝对定位的背景图片 */
-}
-
 body::before {
     content: '';
     position: fixed;  /* 固定背景，不随滚动 */
@@ -124,17 +129,15 @@ body::before {
     z-index: -1;  /* 确保背景图位于内容之下 */
 }
 
-/* 按钮容器 */
 .buttons-container {
     display: flex;
     justify-content: center;
     margin-top: 30px;
 }
 
-/* 按钮样式 */
 .btn {
-    background-color: #111; /* 默认背景色：黑色 */
-    color: white; /* 默认文字颜色：白色 */
+    background-color: #111;
+    color: white;
     font-size: 1rem;
     font-family: Arial, sans-serif;
     border: none;
@@ -142,13 +145,12 @@ body::before {
     margin: 0 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease; /* 按钮的过渡效果 */
-    position: relative; /* 用于放置提示信息 */
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-/* 提示信息的样式 */
 .btn::after {
-    content: attr(data-info); /* 显示按钮的详细信息 */
+    content: attr(data-info);
     position: absolute;
     bottom: -30px;
     left: 50%;
@@ -163,15 +165,13 @@ body::before {
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* 鼠标悬停时显示详细信息 */
 .btn:hover::after {
     opacity: 1;
     visibility: visible;
 }
 
-/* Return 按钮样式 */
 .return-btn {
-    background-color: #8000ff; /* 紫色背景 */
+    background-color: #8000ff;
     color: white;
     font-size: 1rem;
     font-family: Arial, sans-serif;
@@ -183,36 +183,36 @@ body::before {
     transition: all 0.3s ease;
 }
 
-/* 鼠标悬停时的效果 */
 .return-btn:hover {
-    background-color: #ff66b2; /* 背景色变成粉色 */
-    color: #111; /* 文字颜色变成黑色 */
+    background-color: #ff66b2;
+    color: #111;
 }
 
-/* 鼠标悬停时的效果 */
 .btn:hover {
-    background-color: #ff66b2; /* 背景色变成粉色 */
-    color: #111; /* 文字颜色变成黑色 */
+    background-color: #ff66b2;
+    color: #111;
 }
 
-/* 新增博客部分样式 */
 .blog-section {
     width: 100%;
     margin-top: 20px;
     padding: 10px;
     border: 2px solid rgba(177, 1, 177, 0.795);
-    background-color: rgba(0, 0, 0, 0.6); /* 60% 透明度的黑色 */
+    background-color: rgba(0, 0, 0, 0.6);
 }
+
 .blog-section h2 {
     text-align: center;
     margin: 0;
     color: white;
     padding-bottom: 12px;
 }
+
 .blog-posts {
     list-style: none;
     padding: 0;
 }
+
 .blog-post {
     display: flex;
     justify-content: space-between;
@@ -220,33 +220,34 @@ body::before {
     border-bottom: 1px solid #0e25f8e0;
     padding: 5px 0;
 }
+
 .blog-post:last-child {
     border-bottom: none;
 }
+
 .blog-post a {
     color: white;
     text-decoration: none;
 }
+
 .blog-post a:hover {
     text-decoration: underline;
 }
+
 .post-meta {
     color: lightgray;
     font-size: 0.9em;
 }
 
-
-/* 联系信息区域样式 */
 .contact-section {
     width: 100%;
     margin-top: 20px;
     padding: 20px;
-    border: 2px solid purple; /* 紫色边框 */
-    background-color: rgba(0, 0, 0, 0.6); /* 透明黑色背景 */
-    font-family: 'Roboto', sans-serif; /* 更专业的字体 */
+    border: 2px solid purple;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-family: 'Roboto', sans-serif;
 }
 
-/* 标题样式 */
 .contact-section h2 {
     text-align: center;
     color: white;
@@ -254,19 +255,16 @@ body::before {
     font-size: 1.5em;
 }
 
-/* 联系信息内容样式 */
 .contact-info p {
     color: white;
     font-size: 1.1em;
     line-height: 1.8;
 }
 
-/* 强调内容部分的样式 */
 .contact-info strong {
-    color: #cfd300; /* 标题部分为黄色 */
+    color: #d7fd00;
 }
 
-/* 优化字体样式 */
 .contact-section {
     font-family: 'Roboto', sans-serif, Arial, sans-serif;
 }
