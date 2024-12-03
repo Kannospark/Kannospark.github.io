@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kanno's first Page"
 date: 2024-12-02
 ---

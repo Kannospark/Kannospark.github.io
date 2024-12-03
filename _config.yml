@@ -1,2 +1,2 @@
-baseurl: "/kannospark.github.io"  # 这里需要替换为您的仓库名称
-url: "https://kannospark.github.io"
+url: "https://kannospark.github.io"  # 您的 GitHub Pages URL
+baseurl: ""  # GitHub Pages 根目录下不需要 baseurl
