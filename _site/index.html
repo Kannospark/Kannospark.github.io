@@ -6,19 +6,20 @@
     <title>Shibuya Style Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <canvas id="fireworksCanvas"></canvas>
     <div class="container">
         <header>
-            <h1>Kanno's personal page</h1>
-            <p>Welcome to the shibuya style world</p>
+            <h1>Welcome!</h1>
+            <p>This is Kanno's personal page</p>
         </header>
         <div class="buttons-container">
             <a href="javascript:void(0);"><button class="btn return-btn" onclick="window.history.back()" data-info="Go back to the previous page">Return</button></a>
             <a href="index.html"><button class="btn" data-info="Go back to the home page">Home</button></a>
             <a href="information.html"><button class="btn" data-info="Learn more about our project">Information</button></a>
             <a href="major.html"><button class="btn" data-info="Explore the main subjects">Major</button></a>
-            <a href="interest.html"><button class="btn" data-info="Discover things that inspire us">Interest</button></a>
+            <a href="hobby.html"><button class="btn" data-info="Discover things that inspire us">Interest</button></a>
             <a href="blogs.html"><button class="btn" id="blogs-btn" data-info="go to blogs">Blogs</button></a>
         </div>
 
@@ -47,25 +48,24 @@
 
         <div class="blog-section">
             <h2>Latest Blog Posts</h2>
-            <div class="blog-posts">
+            <ul class="blog-posts">
                 
-                    <div class="blog-post">
-                        <!-- 直接使用 post.url -->
-                        <h3><a href="/2024/12/03/holes.html">hole</a></h3>
-                        <p class="post-meta">Posted on December 03, 2024</p>
-                        <p><h3 id="this-blogs-is-used-for-recording-the-mistakes-when-kanno-first-try-to-create-his-own-website">This blogs is used for recording the mistakes when Kanno first try to create his own website.</h3>
-</p>
-                    </div>
+                    <li class="blog-post">
+                        <a href="/2024/12/03/holes.html">hole</a>
+                        <span class="post-meta">December 03, 2024</span>
+                    </li>
                 
-                    <div class="blog-post">
-                        <!-- 直接使用 post.url -->
-                        <h3><a href="/2024/12/02/first_blog.html">Kanno's first Page</a></h3>
-                        <p class="post-meta">Posted on December 02, 2024</p>
-                        <p><h1 id="this-is-kannos-first-blog">This is Kanno’s first blog</h1>
-</p>
-                    </div>
+                    <li class="blog-post">
+                        <a href="/2024/12/02/first_blog.html">Kanno's first Page</a>
+                        <span class="post-meta">December 02, 2024</span>
+                    </li>
                 
-            </div>
+                    <li class="blog-post">
+                        <a href="/2024/12/02/birthday_of_this_page.html">Website Birthday</a>
+                        <span class="post-meta">December 02, 2024</span>
+                    </li>
+                
+            </ul>
         </div>
         
         <footer>

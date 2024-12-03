@@ -194,3 +194,79 @@ body::before {
     background-color: #ff66b2; /* 背景色变成粉色 */
     color: #111; /* 文字颜色变成黑色 */
 }
+
+/* 新增博客部分样式 */
+.blog-section {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid rgba(177, 1, 177, 0.795);
+    background-color: rgba(0, 0, 0, 0.6); /* 60% 透明度的黑色 */
+}
+.blog-section h2 {
+    text-align: center;
+    margin: 0;
+    color: white;
+    padding-bottom: 12px;
+}
+.blog-posts {
+    list-style: none;
+    padding: 0;
+}
+.blog-post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #0e25f8e0;
+    padding: 5px 0;
+}
+.blog-post:last-child {
+    border-bottom: none;
+}
+.blog-post a {
+    color: white;
+    text-decoration: none;
+}
+.blog-post a:hover {
+    text-decoration: underline;
+}
+.post-meta {
+    color: lightgray;
+    font-size: 0.9em;
+}
+
+
+/* 联系信息区域样式 */
+.contact-section {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid purple; /* 紫色边框 */
+    background-color: rgba(0, 0, 0, 0.6); /* 透明黑色背景 */
+    font-family: 'Roboto', sans-serif; /* 更专业的字体 */
+}
+
+/* 标题样式 */
+.contact-section h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+/* 联系信息内容样式 */
+.contact-info p {
+    color: white;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* 强调内容部分的样式 */
+.contact-info strong {
+    color: #cfd300; /* 标题部分为黄色 */
+}
+
+/* 优化字体样式 */
+.contact-section {
+    font-family: 'Roboto', sans-serif, Arial, sans-serif;
+}
