@@ -1,5 +1,5 @@
 ---
-title: Multiplayer_Minecraft
+title: Multiplayer Minecraft
 date: 2024-12-24
 ---
 
