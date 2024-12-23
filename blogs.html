@@ -1,4 +1,8 @@
-<!-- information.html -->
+---
+layout: default
+title: "Blogs"
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style_blogs.css">
 </head>
 <body>
     <canvas id="fireworksCanvas"></canvas>
     <div class="container">
         <header>
-            <h1>Kanno's personal page</h1>
-            <p>This is Kanno's personal page</p>
+            <h1>Kanno's Personal Page</h1>
+            <p>Welcome to Kanno's blog section!</p>
         </header>
 
         <div class="buttons-container">
@@ -20,15 +25,31 @@
             <a href="index.html"><button class="btn" id="home-btn" data-info="Go back to the home page">Home</button></a>
             <a href="information.html"><button class="btn" id="info-btn" data-info="Learn more about our project">Information</button></a>
             <a href="major.html"><button class="btn" id="major-btn" data-info="Explore the main subjects">Major</button></a>
-            <a href="hooby.html"><button class="btn" id="interest-btn" data-info="Discover things that inspire us">Interest</button></a>
+            <a href="hobby.html"><button class="btn" id="interest-btn" data-info="Discover things that inspire us">Interest</button></a>
             <a href="contact.html"><button class="btn" id="contact-btn" data-info="Get in touch with us">Contact</button></a>
-            <a href="blogs.html"><button class="btn" id="blogs-btn" data-info="go to blogs">Blogs</button></a>
+            <a href="blogs.html"><button class="btn" id="blogs-btn" data-info="Go to blogs">Blogs</button></a>
         </div>
 
         <div class="content-box">
-            <p>waiting update</p>
+            <h2>Blog Posts by Date</h2>
+            <div class="blog-posts-list">
+                {% for post in site.posts %}
+                    <div class="blog-post-item">
+                        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3> <!-- Title now links to the post -->
+                        <div class="post-meta">{{ post.date | date: "%B %d, %Y" }}</div>
+                        <p>{{ post.excerpt | truncate: 200 }}</p>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
 
+        <div class="pagination">
+            <a href="#">Previous</a>
+            <a href="#">Next</a>
+        </div>
+
+        <div class="spacer"></div>
+        
         <footer>
             <p>&copy; 2024 Kanno. All rights reserved.</p>
         </footer>
